@@ -1,6 +1,7 @@
-package ca.durhamcollege;
+package ca.durhamcollege.core;
 
-import java.time.LocalDate;
+import ca.durhamcollege.tickets.*;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

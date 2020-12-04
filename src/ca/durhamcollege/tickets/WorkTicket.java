@@ -1,4 +1,4 @@
-package ca.durhamcollege;
+package ca.durhamcollege.tickets;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -214,7 +214,7 @@ public class WorkTicket
 
 
     //Default Constructor
-    WorkTicket()
+    public WorkTicket()
     {
         this.number = 0;
         this.id = null;
