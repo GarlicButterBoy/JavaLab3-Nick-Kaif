@@ -14,7 +14,7 @@ public class Main
         //Variables
         Scanner keyboard = new Scanner(System.in);
         boolean endFlag = true;
-        WorkTicket ticket = new WorkTicket();
+        ExtendedWorkTicket ticket = new ExtendedWorkTicket();
 
         do
         {
