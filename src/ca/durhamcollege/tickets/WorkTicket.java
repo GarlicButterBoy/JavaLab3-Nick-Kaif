@@ -1,3 +1,9 @@
+/*
+ * Nick Sturch-Flint & Kaifkhan Vakil
+ * December 5, 2020
+ * Program: WorkTicket class is created
+ */
+
 package ca.durhamcollege.tickets;
 
 import org.jetbrains.annotations.NotNull;
@@ -198,8 +204,7 @@ public class WorkTicket
         setDescription();
     }
 
-    @Override
-    public String toString()
+    @Override    public String toString()
     {
         String outputStr = "";
         outputStr += "\n========================================\n";
@@ -213,6 +218,7 @@ public class WorkTicket
     }
 
 
+
     //Default Constructor
     public WorkTicket()
     {
@@ -222,7 +228,7 @@ public class WorkTicket
         this.description = null;
     }
     //Object Constructor
-    WorkTicket(@NotNull WorkTicket ticket)
+    public WorkTicket(@NotNull WorkTicket ticket)
     {
         this.number = ticket.number;
         this.id = ticket.id;
@@ -230,7 +236,7 @@ public class WorkTicket
         this.description = ticket.description;
     }
     //Full Constructor
-    WorkTicket(int number, String id, LocalDate date, String desc)
+    public WorkTicket(int number, String id, LocalDate date, String desc)
     {
         this.number = number;
         this.id = id;

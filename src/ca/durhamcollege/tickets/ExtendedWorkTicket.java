@@ -1,3 +1,9 @@
+/*
+ * Nick Sturch-Flint & Kaifkhan Vakil
+ * December 5, 2020
+ * Program: ExtendedWorkTicket class is created
+ */
+
 package ca.durhamcollege.tickets;
 
 import java.time.LocalDate;
@@ -12,39 +18,58 @@ public class ExtendedWorkTicket extends WorkTicket
     //Public Properties
 
     //Constructors
-    void ExtendedWorkTicket(int number, String id, LocalDate date, String description, boolean myOpen)
+    //Parameterized constructor using parameters from base class
+    public ExtendedWorkTicket(int number, String id, LocalDate date, String description, boolean myOpen)
     {
         this.number = number;
         this.id = id;
         this.date = date;
         this.description = description;
-        this.myOpen = true;
+        this.myOpen = myOpen;
     }
 
+    //Default Constructor
+    public  ExtendedWorkTicket()
+    {
+        super();
+        openTicket();
+    }
+    //Parameterized Constructor using a workticket object
+    public ExtendedWorkTicket(WorkTicket ticket, boolean myOpen)
+    {
+        this.number = ticket.number;
+        this.id = ticket.id;
+        this.date = ticket.date;
+        this.description = ticket.description;
+        this.myOpen = myOpen;
+    }
 
     //Private Methods
 
     //Public Methods (Getters and Setters)
-    //isOpen getter
+    //myOpen getter
     public boolean getOpen()
     {
         return myOpen;
     }
-    //isOpen setter
+    //myOpen setter
     public void setOpen(boolean open)
     {
         myOpen = open;
     }
+
     //Method to open a ticket
     public void openTicket()
     {
         this.myOpen = true;
     }
+
     //Method to close a ticket
     public void closeTicket()
     {
         this.myOpen = false;
     }
+
     //Method to return the status of the ticket
     public String isOpen()
     {
@@ -81,7 +106,7 @@ public class ExtendedWorkTicket extends WorkTicket
         outputStr += "Ticket ID: " + getId() + "\n";
         outputStr += "Ticket Description: " + getDescription() + "\n";
         outputStr += "Ticket Status: " + isOpen() + "\n";
-        outputStr += "\n========================================\n";
+        outputStr += "========================================\n";
 
         return outputStr;
     }
